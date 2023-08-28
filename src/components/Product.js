@@ -21,9 +21,6 @@ height:200px;
 border-radius:50%;
 background-color: white;
 position : absolute;
-
-
-
 `;
 const Image = styled.img`
 height: 75%;
@@ -43,12 +40,20 @@ background-color: rgba(0,0,0,0.2);
 z-index:3;
 `;
 const Icon = styled.div`
+
 width:40px;
 height:40px;
 border-radius:50%;
 background-color:white;
 display:flex;
 align-items:center;
+justify-content:center;
+margin:10px;
+transition:all 0.5s ease;
+&:hover{
+  background-color:#e9f5f5;
+  transform: scale(1.1);
+}
 
 `;
 

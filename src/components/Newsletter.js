@@ -1,4 +1,4 @@
-import { Description, Send } from "@mui/icons-material";
+import { Send } from "@mui/icons-material";
 import { styled } from "styled-components";
 
 const Container = styled.div`
@@ -17,7 +17,7 @@ transition: all 0.5s ease;
 
 `;
 const Title = styled.h1``;
-const Desc = styled.p``;
+const Desc = styled.div``;
 const InputContainer = styled.div``;
 const Input = styled.input``;
 const Button = styled.button``;
@@ -25,10 +25,10 @@ const Button = styled.button``;
 const Newsletter = () => {
   return (
    <Container>
-    <Title></Title>
-    <Desc></Desc>
+    <Title>Newsletter</Title>
+    <Desc>Get timely updates from your favorite products.</Desc>
     <InputContainer>
-    <Input />
+    <Input placeholder="your email"/>
     <Button>
         <Send />
     </Button>

@@ -2,19 +2,13 @@ import { Send } from "@mui/icons-material";
 import { styled } from "styled-components";
 
 const Container = styled.div`
-flex:1;
-margin:5px;
-min-width: 280px;
-height: 350px;
+height: 60vh;
 display:flex;
 flex-direction: column;
 align-items:center;
 justify-content:center;
 background-color:#fcf5f5;
 border-radius:10px;
-position:relative;
-cursor:pointer;
-transition: all 0.5s ease;
 
 `;
 const Title = styled.h1`
@@ -27,17 +21,28 @@ font-weight:300;
 margin-buttom:20px;
 `;
 const InputContainer = styled.div`
-width: 50%;
-height: 40%;
-background-color:white;
-dispay:flex;
-justify-content:space-between;
-align-items:center;
-border:1px solid lightgray;
+  width: 40%;
+  height: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+`;
+
+const Input = styled.input`
+border:none;
+flex:8;
+padding-left:20px;
+
 
 `;
-const Input = styled.input``;
-const Button = styled.button``;
+const Button = styled.button`
+flex: 1;
+border:none;
+background-color:teal;
+color:white;
+
+`;
 
 const Newsletter = () => {
   return (

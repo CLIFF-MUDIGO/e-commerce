@@ -3,61 +3,143 @@ import Annoucement from "../components/Annoucement";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-
+import { Add, Remove } from "@mui/icons-material";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
-padding:50px;
-display:flex;
+  padding: 50px;
+  display: flex;
 `;
 const ImgContainer = styled.div`
-flex:1;
+  flex: 1;
 `;
 const Image = styled.img`
-width:100%;
-height:90vh;
-object-fit:cover;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
 `;
 const InfoContainer = styled.div`
-flex:1;
-padding:0px 50px;
+  flex: 1;
+  padding: 0px 50px;
 `;
 const Title = styled.h1`
-font-weigh:200;`;
+  font-weight: 200;
+`;
 const Desc = styled.p`
-margin:20px 0px;`;
+  margin: 20px 0px;
+`;
 const Price = styled.span`
-font-weight:100;
-font-size:40px;
+  font-weight: 100;
+  font-size: 40px;
+`;
+const FilterContainer = styled.div`
+  width: 50%;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+`;
+const Filter = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const FilterTitle = styled.span`
+  font-size: 20px;
+  font-weight: 200;
+`;
+const FilterColor = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: ${(props) => props.color || "transparent"};
+  margin: 0px 5px;
+  cursor: pointer;
+`;
+const FilterSize = styled.select`
+  margin: 10px;
+  padding: 5px;
+`;
+const FilterSizeOption = styled.option``;
+const AddContainer = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const AmountContainer = styled.div`
+  display: flex; /* Missing semicolon here */
+  align-items: center;
+  font-weight: 700;
+`;
+const Amount = styled.span`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+`;
+const Button = styled.button`
+  background-color: white;
+  padding: 15px;
+  border: 2px solid teal;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  &:hover {
+    background-color: #f8f4f4;
+  }
 `;
 
 const Product = () => {
   return (
     <Container>
-     <Navbar/>
-     <Annoucement/>
-     <Wrapper>
+      <Navbar />
+      <Annoucement />
+      <Wrapper>
         <ImgContainer>
-        <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
         </ImgContainer>
         <InfoContainer>
-            <Title>
-               Denim Jumpsuit
-            </Title>
-            <Desc>
-            Versatile denim jumpsuit for a stylish and comfortable look. Features include durable denim fabric, 
-            easy-to-wear design with adjustable straps and pockets
-            </Desc>
-            <Price>
-             $ 20
-            </Price>
-            
+          <Title>Denim Jumpsuit</Title>
+          <Desc>
+            Versatile denim jumpsuit for a stylish and comfortable look.
+            Features include durable denim fabric, easy-to-wear design with
+            adjustable straps and pockets
+          </Desc>
+          <Price>$ 20</Price>
+          <FilterContainer>
+            <Filter>
+              <FilterTitle>Color</FilterTitle>
+              <FilterColor color="black" />
+              <FilterColor color="blue" />
+              <FilterColor color="gray" />
+            </Filter>
+            <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize>
+                <FilterSizeOption>XS</FilterSizeOption>
+                <FilterSizeOption>S</FilterSizeOption>
+                <FilterSizeOption>M</FilterSizeOption>
+                <FilterSizeOption>L</FilterSizeOption>
+              </FilterSize>
+            </Filter>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove />
+              <Amount>1</Amount>
+              <Add />
+            </AmountContainer>
+            <Button>ADD TO CART</Button>
+          </AddContainer>
         </InfoContainer>
-     </Wrapper>
-     <Newsletter/>
-     <Footer/>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

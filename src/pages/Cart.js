@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import Navbar from "../components/Navbar"
 import Annoucement from "../components/Annoucement"
 import Footer from "../components/Footer"
+import { Add, Remove } from "@mui/icons-material";
 
 
 const Container = styled.div`
@@ -62,10 +63,21 @@ display: flex;
 const Image  = styled.img`
 width: 200px;
 `;
-const Details = styled.div``;
+const Details = styled.div`
+padding: 20px;
+display: flex;
+flex-dierection: column;
+justify-content: space-around;
+
+`;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
-const ProductColor = styled.div``;
+const ProductColor = styled.div`
+width: 20px;
+height: 20px;
+border-radius:50%;
+background-color: ${props => props.color}
+`;
 const ProductSize = styled.span``;
 const PriceDetail = styled.div`
 flex: 1;
@@ -96,7 +108,7 @@ const Cart = () => {
                 <TopText>Shopping Bag(2)</TopText>
                 <TopText>Your Wishlist(0)</TopText>
             </TopTexts>
-            <TopButton type="filled">CHECOUT NOW</TopButton>
+            <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
         <Info>
@@ -106,12 +118,16 @@ const Cart = () => {
                     <Details>
                         <ProductName><b>Product:</b> JESSIE THUNDER SHOE</ProductName>
                         <ProductId><b>ID:</b> 7895785893</ProductId>
-                        <ProductColor />
+                        <ProductColor color="black" />
                         <ProductSize><b>Size:</b> 37.5</ProductSize>
                     </Details>
                 </ProductDetail>
                 <PriceDetail>
-                    price
+                    <ProductAmountContainer>
+                        <Add />
+
+                        <Remove />
+                    </ProductAmountContainer>
                 </PriceDetail>
             </Product>
         </Info>

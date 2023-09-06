@@ -51,17 +51,35 @@ justify-content: space-between;
 const Info= styled.div`
 flex:3;
 `;
-const Product = styled.div``;
-const ProductDetail = styled.div``;
-const Image  = styled.img``;
+const Product = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+const ProductDetail = styled.div`
+flex: 2;
+display: flex;
+`;
+const Image  = styled.img`
+width: 200px;
+`;
 const Details = styled.div``;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
 const ProductColor = styled.div``;
 const ProductSize = styled.span``;
-const PriceDetail = styled.div``;
+const PriceDetail = styled.div`
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`;
 const Summary = styled.div`
-flex:1;
+flex: 1;
+border: 0.5px solid lightgray;
+border-radius: 10px;
+padding: 20px;
+height: 50vh;
 
 `;
 

@@ -24,7 +24,7 @@ ${mobile({ textAlign: "center" })}
 `;
 const InputContainer = styled.div`
   width: 50%;
-  height: 40%;
+  height: 10%;
   background-color: white;
   display: flex;
   justify-content: space-between;
